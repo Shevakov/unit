@@ -1,0 +1,16 @@
+<form name="form">
+  <input
+    type="text"
+    name="length"
+    ng-model="$ctrl.length"
+    ng-pattern="/(auto|\d*\.?\d+)\s?(px|em|ex|%|in|cn|mm|pt|pc+)?/"
+    ng-blur="$ctrl.setNgModel()"
+  >
+  <select ng-model="$ctrl.unit" ng-change="$ctrl.setNgModel()">
+    <option ng-repeat="option in $ctrl.menuItems" value="{{option}}">
+      {{option}}
+    </option>
+    <option value="">-</option>
+  </select>
+  <span ng-hide="form.length.$valid">Error!</span>
+</form>

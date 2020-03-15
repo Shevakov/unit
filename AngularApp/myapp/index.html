@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="components/lengthValue.components.js"></script>
+  </head>
+
+  <body ng-app="app">
+    <div ng-controller="MainCtrl">
+      <length-value
+        menu-items="options"
+        ng-model="value">
+      </length-value>
+
+      <h2>{{ value }}</h2>
+    </div>
+  </body>
+</html>
+
+
